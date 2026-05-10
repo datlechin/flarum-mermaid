@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 [![Latest Stable Version](https://img.shields.io/packagist/v/datlechin/flarum-mermaid.svg)](https://packagist.org/packages/datlechin/flarum-mermaid)
 [![Total Downloads](https://img.shields.io/packagist/dt/datlechin/flarum-mermaid.svg)](https://packagist.org/packages/datlechin/flarum-mermaid)
+[![Sponsor](https://img.shields.io/github/sponsors/datlechin?logo=githubsponsors&label=Sponsor)](https://github.com/sponsors/datlechin)
 
 A [Flarum](https://flarum.org) extension that renders [Mermaid](https://mermaid.js.org) diagrams inside posts.
 
