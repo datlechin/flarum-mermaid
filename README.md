@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/datlechin/flarum-mermaid.svg)](https://packagist.org/packages/datlechin/flarum-mermaid)
 [![Total Downloads](https://img.shields.io/packagist/dt/datlechin/flarum-mermaid.svg)](https://packagist.org/packages/datlechin/flarum-mermaid)
 
-A [Flarum](https://flarum.org) extension that renders [Mermaid](https://mermaid.js.org) diagrams inside posts. Wrap a diagram in a fenced ` ```mermaid ` code block and it shows up as an SVG when the post is read.
+A [Flarum](https://flarum.org) extension that renders [Mermaid](https://mermaid.js.org) diagrams inside posts.
 
 ![Mermaid diagram rendered inside a Flarum post](screenshots/example.png)
 
@@ -20,8 +20,6 @@ flowchart LR
     D --> E
 ```
 ````
-
-The mermaid library is fetched from jsDelivr only on pages that contain a diagram, so forums without diagrams pay nothing.
 
 ## Installation
 
