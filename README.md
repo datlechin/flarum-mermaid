@@ -44,4 +44,5 @@ If this extension is useful to you, you can sponsor the work via [GitHub Sponsor
 
 - [Packagist](https://packagist.org/packages/datlechin/flarum-mermaid)
 - [GitHub](https://github.com/datlechin/flarum-mermaid)
+- [Discuss](https://discuss.flarum.org/d/39236)
 - [Mermaid](https://mermaid.js.org)

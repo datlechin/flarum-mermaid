@@ -12,7 +12,8 @@
     "license": "MIT",
     "support": {
         "issues": "https://github.com/datlechin/flarum-mermaid/issues",
-        "source": "https://github.com/datlechin/flarum-mermaid"
+        "source": "https://github.com/datlechin/flarum-mermaid",
+        "forum": "https://discuss.flarum.org/d/39236"
     },
     "homepage": "https://nqd.vn",
     "funding": [
