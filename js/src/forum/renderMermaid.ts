@@ -22,9 +22,7 @@ declare global {
 }
 
 export default async function renderMermaidIn(root: ParentNode): Promise<void> {
-  const blocks = root.querySelectorAll<HTMLElement>(
-    'code.language-mermaid:not([data-mermaid-rendered])'
-  );
+  const blocks = root.querySelectorAll<HTMLElement>('code.language-mermaid:not([data-mermaid-rendered])');
   if (blocks.length === 0) return;
 
   const mermaid = await getMermaid();
@@ -80,10 +78,7 @@ function loadMermaidScript(): Promise<MermaidLib> {
     const script = document.createElement('script');
     script.src = MERMAID_CDN;
     script.async = true;
-    script.onload = () =>
-      window.mermaid
-        ? resolve(window.mermaid)
-        : reject(new Error('Mermaid library failed to attach to window.'));
+    script.onload = () => (window.mermaid ? resolve(window.mermaid) : reject(new Error('Mermaid library failed to attach to window.')));
     script.onerror = () => reject(new Error(`Failed to load mermaid from ${MERMAID_CDN}.`));
     document.head.appendChild(script);
   });
