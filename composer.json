@@ -1,0 +1,79 @@
+{
+    "name": "datlechin/flarum-mermaid",
+    "description": "Render Mermaid diagrams in Flarum posts.",
+    "type": "flarum-extension",
+    "keywords": [
+        "flarum",
+        "mermaid",
+        "diagrams",
+        "markdown",
+        "flowchart"
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/datlechin/flarum-mermaid/issues",
+        "source": "https://github.com/datlechin/flarum-mermaid"
+    },
+    "homepage": "https://nqd.vn",
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/datlechin"
+        },
+        {
+            "type": "custom",
+            "url": "https://buymeacoffee.com/ngoquocdat"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Ngo Quoc Dat",
+            "email": "datlechin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "flarum/core": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Datlechin\\Mermaid\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Mermaid",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-diagram-project",
+                "color": "#ffffff",
+                "backgroundColor": "#FF3670"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "frontendTesting": false,
+                "backendTesting": false,
+                "phpstan": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
