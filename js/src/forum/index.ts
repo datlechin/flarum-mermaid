@@ -12,7 +12,7 @@ app.initializers.add('datlechin-mermaid', () => {
   // and CommentPost's lifecycle hooks pass a VnodeDOM as their only arg.
   const onPostRender = function (this: unknown, _: unknown, ...args: unknown[]) {
     const vnode = args[0] as Mithril.VnodeDOM;
-    void renderMermaidIn(vnode.dom);
+    renderMermaidIn(vnode.dom).catch((err) => console.error('[datlechin-mermaid]', err));
   };
 
   extend('flarum/forum/components/CommentPost', 'oncreate', onPostRender);
