@@ -66,7 +66,14 @@ let mermaidPromise: Promise<MermaidLib> | null = null;
 
 function getMermaid(): Promise<MermaidLib> {
   if (!mermaidPromise) {
-    mermaidPromise = loadMermaidScript().then(initializeMermaid);
+    mermaidPromise = loadMermaidScript()
+      .then(initializeMermaid)
+      .catch((err) => {
+        // Don't cache the rejection: a transient CDN failure would otherwise
+        // disable the extension for the rest of the page session.
+        mermaidPromise = null;
+        throw err;
+      });
   }
   return mermaidPromise;
 }
@@ -102,9 +109,11 @@ function detectTheme(): 'default' | 'dark' {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
 }
 
+let diagramCounter = 0;
+
 function diagramId(): string {
-  // crypto.randomUUID is available in every browser that supports WebAuthn,
-  // which is a strict superset of every browser that runs Flarum 2.x. The
-  // string is namespaced into the SVG id so it can never collide.
-  return crypto.randomUUID();
+  // Not crypto.randomUUID(): that is gated to secure contexts, so it is absent
+  // on forums served over plain HTTP. A counter is enough — the id only has to
+  // be unique within the document.
+  return `${++diagramCounter}`;
 }
