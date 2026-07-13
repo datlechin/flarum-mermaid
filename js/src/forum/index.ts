@@ -1,7 +1,7 @@
 import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
 import type Mithril from 'mithril';
-import renderMermaidIn from './renderMermaid';
+import renderMermaidIn, { watchColorScheme } from './renderMermaid';
 
 export { default as extend } from './extend';
 
@@ -17,4 +17,6 @@ app.initializers.add('datlechin-mermaid', () => {
 
   extend('flarum/forum/components/CommentPost', 'oncreate', onPostRender);
   extend('flarum/forum/components/CommentPost', 'onupdate', onPostRender);
+
+  watchColorScheme();
 });

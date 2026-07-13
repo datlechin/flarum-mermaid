@@ -22,6 +22,15 @@ flowchart LR
 ```
 ````
 
+## Settings
+
+Diagrams match your forum out of the box. They use the font your forum uses for post text, take their colours from your forum, and follow light and dark mode as the reader switches. Two settings change that:
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| Diagram theme | Match forum theme | Takes the diagram colours from your forum. Mermaid's own themes (default, dark, neutral, forest) can be picked instead. |
+| Font family | _(empty)_ | Any CSS font stack, such as `"Inter", system-ui, sans-serif`. Leave empty to use the forum's post font. |
+
 ## Installation
 
 ```sh
